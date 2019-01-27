@@ -6,6 +6,28 @@ import java.util.Arrays;
 
 public class Algorithms {
     
+    void twoSmallest(){
+    /*
+        
+    */
+    
+    int arr[]={12, 13, 1, 10, 34, 1};
+    int firstSmallest=arr[0];
+    int secondSmallest=arr[1];
+    
+    for(int i=0;i<arr.length;i++){
+        if(arr[i]<firstSmallest){
+            secondSmallest=firstSmallest;
+            firstSmallest=arr[i];
+        }
+        else if(arr[i]<secondSmallest && arr[i]!=firstSmallest){
+            secondSmallest=arr[i];
+        }
+    }
+        System.out.println("Two Smallest No. : "+firstSmallest+" , "+secondSmallest);
+    
+    }
+    
     void sumClosestToZero(){
         /*
         An Array of integers is given, both +ve and -ve.
@@ -54,8 +76,9 @@ public class Algorithms {
     
     public static void main(String[] args) {
       Algorithms algorithms = new Algorithms();
-      algorithms.missingNumber();
-      algorithms.sumClosestToZero();
+      //algorithms.missingNumber();
+      //algorithms.sumClosestToZero();
+      algorithms.twoSmallest();
     }
     
 }
