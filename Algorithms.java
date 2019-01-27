@@ -6,6 +6,31 @@ import java.util.Arrays;
 
 public class Algorithms {
     
+    void maxMin(){
+        /*
+        Maximum and minimum of an array using minimum number of comparisons
+        */
+        int arr[]={1000, 11, 445, 1, 330, 3000};
+        int max,min;
+        if(arr[0]>arr[1]){
+            max=arr[0];
+            min=arr[1];
+        }
+        else{
+            max=arr[1];
+            min=arr[0];
+        }
+        for(int i =2;i<arr.length;i++){
+            if(arr[i]>max){
+                max=arr[i];
+            }
+            if(arr[i]<min){
+                min=arr[i];
+            }
+        }
+        System.out.println("Max : "+max+" Min : "+min);
+    }
+    
     void twoSmallest(){
     /*
         
@@ -78,7 +103,8 @@ public class Algorithms {
       Algorithms algorithms = new Algorithms();
       //algorithms.missingNumber();
       //algorithms.sumClosestToZero();
-      algorithms.twoSmallest();
+      //algorithms.twoSmallest();
+      algorithms.maxMin();
     }
     
 }
